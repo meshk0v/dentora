@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-cream-100 font-sans text-ink-900 antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  ::selection {
+    @apply bg-sea-200 text-ink-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-sea-500 ring-offset-2 ring-offset-cream-100;
+  }
+  h1, h2, h3 {
+    @apply tracking-tight;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-sea-600;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply h-px w-6 bg-sea-400;
+  }
+  .accent {
+    @apply font-serif font-medium italic text-sea-600;
+  }
+  .card {
+    @apply rounded-3xl border border-cream-300/80 bg-cream-50 shadow-soft;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+    transition-delay: var(--delay, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .grain {
+    background-image: radial-gradient(rgba(19, 28, 44, 0.05) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

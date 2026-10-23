@@ -144,7 +144,7 @@ export function BookingWizard() {
         <StepIndicator current={step} />
       </div>
       <div className={isDone ? '' : 'grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start'}>
-        <section className="card p-5 sm:p-8" aria-labelledby="booking-step-title">
+        <section className="card min-w-0 p-5 sm:p-8" aria-labelledby="booking-step-title">
           {isDone ? (
             <SuccessStep appointment={result} onRestart={restart} />
           ) : (
@@ -207,10 +207,21 @@ export function BookingWizard() {
                     loading={submitting}
                     variant={step === 5 ? 'accent' : 'primary'}
                     size="md"
-                    className="min-w-[140px]"
+                    className="min-w-[140px] whitespace-nowrap"
                     icon={step === 5 ? <Send className="h-4 w-4" aria-hidden /> : undefined}
                   >
-                    {step === 5 ? (submitting ? 'Сохраняем…' : 'Создать демо-запись') : 'Далее'}
+                    {step === 5 ? (
+                      submitting ? (
+                        'Сохраняем…'
+                      ) : (
+                        <>
+                          <span className="sm:hidden">Записаться</span>
+                          <span className="hidden sm:inline">Создать демо-запись</span>
+                        </>
+                      )
+                    ) : (
+                      'Далее'
+                    )}
                     {step < 5 && <ArrowRight className="h-4 w-4" aria-hidden />}
                   </Button>
                 </div>

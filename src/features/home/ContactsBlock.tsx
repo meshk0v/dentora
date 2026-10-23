@@ -39,14 +39,14 @@ export function ContactsBlock() {
   return (
     <section className="py-20 lg:py-28" aria-labelledby="contacts-title">
       <div className="container grid gap-5 lg:grid-cols-[1fr_1.3fr]">
-        <Reveal className="card flex flex-col p-8 sm:p-10">
+        <Reveal className="card flex min-w-0 flex-col p-6 sm:p-10">
           <p className="eyebrow mb-4">Контакты</p>
           <h2 id="contacts-title" className="text-3xl font-semibold sm:text-4xl">Как нас найти</h2>
           <ul className="mt-8 space-y-5">
             {items.map(({ icon: Icon, label, value, href }) => (
               <li key={label} className="flex gap-4">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-sea-50 text-sea-600"><Icon className="h-5 w-5" aria-hidden /></span>
-                <div>
+                <div className="min-w-0 break-words">
                   <p className="text-xs text-ink-400">{label}</p>
                   {href ? <a href={href} className="font-semibold text-ink-900 hover:text-sea-600">{value}</a> : <p className="font-semibold text-ink-900">{value}</p>}
                 </div>

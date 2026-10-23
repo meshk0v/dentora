@@ -34,8 +34,8 @@ export function ReviewStep({ draft, onEdit, consent, onConsent, consentError }: 
               <dt className="text-xs text-ink-400">{r.label}</dt>
               <dd className="mt-0.5 break-words font-semibold text-ink-900 first-letter:uppercase">{r.value}</dd>
             </div>
-            <button type="button" onClick={() => onEdit(r.step)} className="flex shrink-0 items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold text-sea-600 hover:bg-sea-50" aria-label={`Изменить: ${r.label}`}>
-              <Pencil className="h-3 w-3" aria-hidden /> Изменить
+            <button type="button" onClick={() => onEdit(r.step)} className="-mr-2 flex h-9 min-w-9 shrink-0 items-center justify-center gap-1 rounded-full px-2.5 text-xs font-semibold text-sea-600 hover:bg-sea-50" aria-label={`Изменить: ${r.label}`}>
+              <Pencil className="h-3.5 w-3.5 sm:h-3 sm:w-3" aria-hidden /> <span className="hidden sm:inline">Изменить</span>
             </button>
           </div>
         ))}

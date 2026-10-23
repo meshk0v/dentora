@@ -7,7 +7,7 @@ type Variant = 'primary' | 'accent' | 'light' | 'outline' | 'ghost' | 'danger';
 type Size = 'sm' | 'md' | 'lg';
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 select-none disabled:pointer-events-none disabled:opacity-50 active:scale-[.98]';
+  'inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all duration-200 select-none disabled:pointer-events-none disabled:opacity-50 active:scale-[.98]';
 const variants: Record<Variant, string> = {
   primary: 'bg-ink-900 text-cream-50 hover:bg-ink-800 shadow-[0_8px_20px_-8px_rgba(19,28,44,.5)]',
   accent: 'bg-sea-500 text-white hover:bg-sea-600 shadow-[0_8px_20px_-8px_rgba(61,138,134,.6)]',

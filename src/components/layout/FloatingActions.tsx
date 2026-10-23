@@ -23,7 +23,7 @@ export function FloatingActions() {
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className={cn(
           'fixed right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-cream-300 bg-cream-50/90 text-ink-800 shadow-lift backdrop-blur transition-all duration-300 hover:bg-ink-900 hover:text-cream-50 sm:bottom-6 sm:right-6',
-          onBooking ? 'bottom-4' : 'bottom-24',
+          'bottom-24',
           shown ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0',
         )}
         aria-label="Наверх"

@@ -32,7 +32,7 @@ export function BookingSummary({ draft }: { draft: BookingDraft }) {
       {service && (
         <div className="mt-5 flex items-center justify-between border-t border-cream-300 pt-4 text-sm">
           <span className="flex items-center gap-2 text-ink-400">
-            <Wallet className="h-4 w-4" aria-hidden /> Демо-стоимость
+            <Wallet className="h-4 w-4" aria-hidden /> Стоимость
           </span>
           <span className="text-right font-semibold text-ink-900">
             {formatPrice(service.priceFrom, service.priceTo)}

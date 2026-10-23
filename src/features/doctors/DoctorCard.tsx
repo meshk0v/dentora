@@ -14,7 +14,6 @@ export function DoctorCard({ doctor, onOpen }: Props) {
       <button type="button" onClick={() => onOpen(doctor)} className="relative block aspect-[4/5] overflow-hidden text-left" aria-label={`Профиль: ${doctor.name}`}>
         <SmartImage name={doctor.photo} alt={`${doctor.name}, ${doctor.role}`} wrapperClassName="h-full w-full" className="transition duration-700 group-hover:scale-[1.04]" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-950/60 to-transparent" aria-hidden />
-        <span className="absolute left-4 top-4 rounded-full bg-cream-50/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-ink-600 backdrop-blur">Демо-профиль</span>
         <div className="absolute inset-x-5 bottom-5 text-cream-50">
           <p className="text-sm font-medium text-sea-100">{doctor.role}</p>
           <h3 className="text-2xl font-semibold">{doctor.name}</h3>

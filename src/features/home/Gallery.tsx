@@ -14,7 +14,7 @@ export function Gallery() {
   return (
     <section className="py-20 lg:py-28" aria-labelledby="gallery-title">
       <div className="container">
-        <SectionHeading eyebrow="Интерьер" title={<span id="gallery-title">Пространство, в котором <span className="accent">спокойно</span></span>} text="Фотографии стоковые и служат примером — клиника заменит их своими." />
+        <SectionHeading eyebrow="Интерьер" title={<span id="gallery-title">Пространство, в котором <span className="accent">спокойно</span></span>} text="Светлые кабинеты, современное оборудование и спокойная атмосфера." />
         <div className="grid grid-flow-dense auto-rows-[180px] grid-cols-2 gap-3 sm:auto-rows-[220px] sm:gap-4 lg:grid-cols-4">
           {gallery.map((g, i) => (
             <Reveal key={g.src} delay={i * 60} className={cn(g.span === 'wide' && 'col-span-2', g.span === 'tall' && 'row-span-2')}>

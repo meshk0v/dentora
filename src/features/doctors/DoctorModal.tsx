@@ -4,7 +4,6 @@ import { categoryById, services } from '@/data/services';
 import { Modal } from '@/components/ui/Modal';
 import { SmartImage } from '@/components/ui/SmartImage';
 import { ButtonLink } from '@/components/ui/Button';
-import { DemoNotice } from '@/components/ui/DemoNotice';
 import { Link } from 'react-router-dom';
 
 const weekdays = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
@@ -39,7 +38,7 @@ export function DoctorModal({ doctor, onClose }: { doctor: Doctor | null; onClos
             </div>
             <div>
               <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-ink-400">
-                <CalendarDays className="h-4 w-4" aria-hidden /> Дни приёма (демо)
+                <CalendarDays className="h-4 w-4" aria-hidden /> Дни приёма
               </h3>
               <div className="flex gap-1.5">
                 {weekdays.map((d, i) => {
@@ -64,7 +63,6 @@ export function DoctorModal({ doctor, onClose }: { doctor: Doctor | null; onClos
                 </div>
               </div>
             )}
-            <DemoNotice>Профиль демонстрационный: имя вымышлено, фото стоковое. Стаж, квалификация и документы указываются реальной клиникой.</DemoNotice>
             <ButtonLink to={`/booking?doctor=${doctor.id}`} size="lg" onClick={onClose} icon={<CalendarCheck className="h-5 w-5" aria-hidden />} data-autofocus>
               Записаться к специалисту
             </ButtonLink>

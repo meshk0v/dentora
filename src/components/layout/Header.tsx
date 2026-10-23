@@ -97,7 +97,6 @@ export function Header() {
               <a href={clinic.phoneHref} className="flex items-center gap-3 px-4 text-lg font-semibold">
                 <Phone className="h-5 w-5 text-sea-500" aria-hidden /> {clinic.phone}
               </a>
-              <p className="px-4 text-sm text-ink-400">Телефон демонстрационный</p>
               <ButtonLink to="/booking" size="lg" className="w-full">
                 Записаться на приём
               </ButtonLink>

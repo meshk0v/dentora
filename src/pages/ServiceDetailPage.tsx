@@ -6,7 +6,6 @@ import { formatDuration, formatPrice } from '@/lib/format';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { ButtonLink } from '@/components/ui/Button';
-import { DemoNotice } from '@/components/ui/DemoNotice';
 import { Reveal } from '@/components/ui/Reveal';
 import { SmartImage } from '@/components/ui/SmartImage';
 import { ServiceCard } from '@/features/services/ServiceCard';
@@ -75,7 +74,7 @@ export default function ServiceDetailPage() {
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="card space-y-6 p-6 sm:p-8">
             <div>
-              <p className="flex items-center gap-2 text-sm text-ink-400"><Wallet className="h-4 w-4" aria-hidden /> Демо-стоимость</p>
+              <p className="flex items-center gap-2 text-sm text-ink-400"><Wallet className="h-4 w-4" aria-hidden /> Стоимость</p>
               <p className="mt-1 text-3xl font-semibold text-ink-900">{formatPrice(s.priceFrom, s.priceTo)}</p>
             </div>
             {s.durationMin && (
@@ -87,7 +86,7 @@ export default function ServiceDetailPage() {
             <ButtonLink to={`/booking?service=${s.id}`} size="lg" className="w-full px-4 text-[15px]" icon={<CalendarCheck className="h-5 w-5" aria-hidden />}>
               Записаться на консультацию
             </ButtonLink>
-            <DemoNotice>Цена, длительность и описание — демонстрационные. Не является медицинской рекомендацией.</DemoNotice>
+            <p className="text-xs leading-relaxed text-ink-400">Стоимость и длительность ориентировочные и уточняются врачом после осмотра.</p>
           </div>
           <Link to="/services" className="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-ink-500 hover:text-ink-900">
             <ArrowLeft className="h-4 w-4" aria-hidden /> Все услуги

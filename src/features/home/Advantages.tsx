@@ -6,7 +6,7 @@ import { SmartImage } from '@/components/ui/SmartImage';
 const items = [
   { icon: Microscope, title: 'Цифровая диагностика', text: 'КТ, 3D-сканирование и снимки помогают врачу точнее спланировать лечение.' },
   { icon: ClipboardList, title: 'План до начала лечения', text: 'Вы заранее видите этапы и ориентировочную стоимость и можете обсудить варианты.' },
-  { icon: ShieldCheck, title: 'Стерильность и протоколы', text: 'Обработка инструментов по установленным стандартам — пример блока для клиники.' },
+  { icon: ShieldCheck, title: 'Стерильность и протоколы', text: 'Обработка и стерилизация инструментов по установленным стандартам.' },
   { icon: Armchair, title: 'Комфортная атмосфера', text: 'Спокойные интерьеры и время приёма, забронированное именно для вас.' },
 ];
 
@@ -23,7 +23,6 @@ export function Advantages() {
               <blockquote className="relative mt-8 font-serif text-3xl italic leading-snug sm:text-4xl">
                 «Пациент должен понимать, что и зачем мы делаем, — до того, как сядет в кресло».
               </blockquote>
-              <p className="relative mt-8 text-sm text-ink-300">Пример формулировки ценностей клиники</p>
             </div>
           </Reveal>
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-7">

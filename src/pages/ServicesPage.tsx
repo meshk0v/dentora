@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { LayoutGrid, List } from 'lucide-react';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { PageHeader } from '@/components/layout/PageHeader';
-import { DemoNotice } from '@/components/ui/DemoNotice';
 import { ServiceCatalog } from '@/features/services/ServiceCatalog';
 import { PriceTable } from '@/features/services/PriceTable';
 import { cn } from '@/lib/cn';
@@ -13,7 +12,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader eyebrow="Услуги и цены" title={<>Понятные услуги и <span className="accent">прозрачные</span> цены</>} text="Найдите нужное направление, изучите этапы и запишитесь на консультацию." crumbs={[{ label: 'Услуги и цены' }]}>
-        <DemoNotice className="max-w-2xl">Цены, описания и сроки — демонстрационные и должны быть проверены клиникой перед использованием. Итоговую стоимость определяет врач после осмотра.</DemoNotice>
+        <p className="max-w-2xl text-sm text-ink-400">Цены указаны ориентировочно. Итоговую стоимость определяет врач после осмотра.</p>
       </PageHeader>
       <div className="container py-12 lg:py-16">
         <div className="mb-6 flex justify-end">

@@ -32,9 +32,9 @@ export function MapPlaceholder() {
 
 export function ContactsBlock() {
   const items = [
-    { icon: Phone, label: 'Телефон (демо)', value: clinic.phone, href: clinic.phoneHref },
-    { icon: Mail, label: 'Почта (демо)', value: clinic.email, href: `mailto:${clinic.email}` },
-    { icon: MapPin, label: 'Адрес (демо)', value: `${clinic.city}, ${clinic.address}` },
+    { icon: Phone, label: 'Телефон', value: clinic.phone, href: clinic.phoneHref },
+    { icon: Mail, label: 'Почта', value: clinic.email, href: `mailto:${clinic.email}` },
+    { icon: MapPin, label: 'Адрес', value: `${clinic.city}, ${clinic.address}` },
   ];
   return (
     <section className="py-20 lg:py-28" aria-labelledby="contacts-title">

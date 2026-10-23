@@ -4,7 +4,6 @@ import { PageHeader } from '@/components/layout/PageHeader';
 import { ButtonLink } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { SmartImage } from '@/components/ui/SmartImage';
-import { DemoNotice } from '@/components/ui/DemoNotice';
 import { Gallery } from '@/features/home/Gallery';
 import { FirstVisit } from '@/features/home/FirstVisit';
 
@@ -19,7 +18,7 @@ export default function AboutPage() {
   useDocumentTitle('О клинике');
   return (
     <>
-      <PageHeader eyebrow="О клинике" title={<>Стоматология, где <span className="accent">всё понятно</span></>} text="DENTORA — пример того, как может выглядеть сайт современной частной клиники." crumbs={[{ label: 'О клинике' }]} />
+      <PageHeader eyebrow="О клинике" title={<>Стоматология, где <span className="accent">всё понятно</span></>} text="DENTORA — современная частная клиника, где каждый этап лечения объясняют заранее." crumbs={[{ label: 'О клинике' }]} />
       <section className="container grid items-center gap-10 py-16 lg:grid-cols-2 lg:gap-16 lg:py-24">
         <Reveal>
           <SmartImage name="consultation" alt="Врач объясняет результаты диагностики" wrapperClassName="aspect-[5/4] rounded-[32px]" />
@@ -30,7 +29,6 @@ export default function AboutPage() {
             <p>Мы верим, что хорошая стоматология начинается с разговора. Врач выясняет, что беспокоит пациента, объясняет результаты диагностики и предлагает варианты — с понятными этапами и стоимостью.</p>
             <p>Решение о лечении принимается вместе: без давления и навязанных услуг.</p>
           </div>
-          <DemoNotice className="mt-6">Текст-пример. Клиника заменяет его собственной историей, документами и сведениями о лицензии.</DemoNotice>
         </Reveal>
       </section>
       <section className="container pb-16 lg:pb-24">

@@ -13,7 +13,7 @@ export function TeamSection() {
         <SectionHeading
           eyebrow="Команда"
           title={<span id="team-title">Специалисты, которые <span className="accent">объясняют</span>, а не торопят</span>}
-          text="Профили демонстрационные: имена вымышлены, фотографии стоковые."
+          text="Познакомьтесь с врачами до визита и выберите специалиста по своему направлению."
           action={<ButtonLink to="/doctors" variant="outline">Все врачи <ArrowRight className="h-4 w-4" aria-hidden /></ButtonLink>}
         />
         <div className="scrollbar-none -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-4">

@@ -5,6 +5,7 @@ import { AdminLayout } from '@/layouts/AdminLayout';
 import { ToastProvider } from '@/components/ui/Toast';
 import { ScrollToTopOnNavigate } from '@/components/layout/ScrollRestoration';
 import { Skeleton } from '@/components/ui/Skeleton';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import HomePage from '@/pages/HomePage';
 
 const ServicesPage = lazy(() => import('@/pages/ServicesPage'));
@@ -39,24 +40,26 @@ export default function App() {
     <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ToastProvider>
         <ScrollToTopOnNavigate />
-        <Suspense fallback={<PageFallback />}>
-          <Routes>
-            <Route element={<MainLayout />}>
-              <Route index element={<HomePage />} />
-              <Route path="services" element={<ServicesPage />} />
-              <Route path="services/:id" element={<ServiceDetailPage />} />
-              <Route path="doctors" element={<DoctorsPage />} />
-              <Route path="booking" element={<BookingPage />} />
-              <Route path="about" element={<AboutPage />} />
-              <Route path="contacts" element={<ContactsPage />} />
-              <Route path="faq" element={<FaqPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Route>
-            <Route path="admin" element={<AdminLayout />}>
-              <Route index element={<AdminPage />} />
-            </Route>
-          </Routes>
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<PageFallback />}>
+            <Routes>
+              <Route element={<MainLayout />}>
+                <Route index element={<HomePage />} />
+                <Route path="services" element={<ServicesPage />} />
+                <Route path="services/:id" element={<ServiceDetailPage />} />
+                <Route path="doctors" element={<DoctorsPage />} />
+                <Route path="booking" element={<BookingPage />} />
+                <Route path="about" element={<AboutPage />} />
+                <Route path="contacts" element={<ContactsPage />} />
+                <Route path="faq" element={<FaqPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Route>
+              <Route path="admin" element={<AdminLayout />}>
+                <Route index element={<AdminPage />} />
+              </Route>
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </ToastProvider>
     </HashRouter>
   );

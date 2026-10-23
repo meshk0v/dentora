@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
-import { clinic, DEMO_NOTE } from '@/data/clinic';
+import { clinic } from '@/data/clinic';
 import { categories } from '@/data/services';
 import { Logo } from '@/components/ui/Logo';
 import { mainNav } from './nav';
@@ -29,7 +29,7 @@ export function Footer() {
             ))}
             <li>
               <Link to="/admin" className="transition hover:text-white">
-                Панель администратора (демо)
+                Панель администратора
               </Link>
             </li>
           </ul>
@@ -69,9 +69,8 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container flex flex-col gap-3 py-6 text-xs leading-relaxed text-ink-400 md:flex-row md:items-center md:justify-between">
-          <p className="max-w-3xl">{DEMO_NOTE} Информация на сайте не является медицинской рекомендацией.</p>
-          <p className="shrink-0">© {new Date().getFullYear()} {clinic.name} · демо-проект</p>
+        <div className="container py-6 text-xs text-ink-400">
+          <p>© {new Date().getFullYear()} {clinic.name}</p>
         </div>
       </div>
     </footer>
